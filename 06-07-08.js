@@ -103,9 +103,9 @@ function crearClaseViajero() {
      edades = edades / this.companeros.length;
      return edades;
      }
-    console.log(viajero.getPromedioEdad())
     }
   }
+    console.log(viajero.getPromedioEdad())
 }
 
 
