@@ -19,15 +19,17 @@ function sumArray(array, n) {
   // por lo tanto también debería devolver false en este caso
 
   // Tu código aca:
-  const array = [2, 5, 7, 10, 11, 15, 20];
-  let suma = 0;
+  let arreglo = [2,5,7,10,11,15,20];
 
-  for (let i = 0; i < array.length; i++) {
-  suma += array[i];
-}
-}
-console.log(suma)
+  function sumArray(numeros, ingreso){
+      return numeros.some(numero => numeros.filter(n => n != numero).includes(ingreso-numero))
+  }
+  
+  for (let i = 4; i < 25; i += 3) {
+  }
+    console.log(`Para el número ${i}: ${sumArray(arreglo, i)}`)
 
+}
 // No modifiques nada debajo de esta linea //
 
 module.exports = sumArray
