@@ -14,8 +14,21 @@ function sumaTodosPrimos(array) {
   // Nota: Podes usar la funcion 'esPrimo' resuelta en la homework JSII.
 
   // Tu código aca:
-
+  function sumaTodosPrimos(numeros) {
+    const primos = numeros.filter(numero => esPrimo(numero));
+    const sumador = (accumulador, valorActual) => accumulador + valorActual;
+    
+    return primos.reduce(sumador);
+  }
+  
+  const esPrimo = numero => {
+    for(let i = 2; i < numero; i++)
+      if(numero % i === 0) return false;
+    return numero > 1;
 }
+}
+  console.log(sumaTodosPrimos([1, 5, 2, 9, 3, 4, 11]));
+
 
 // No modifiques nada debajo de esta linea //
 

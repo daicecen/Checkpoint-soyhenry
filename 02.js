@@ -13,8 +13,15 @@ function mismaCantidadCaracteres(strings, caracteres) {
   // mismaCantidadCaracteres(['javascript', 'pedro', 'amigo', 'parque'], 5) debe retornar ['pedro', 'amigo']
 
   // Tu código aca:
-
+  function mismaCantidadCaracteres(strings, caracteres) {
+    return strings.filter(string => string.length === caracteres);
+  }
+  const result1 = mismaCantidadCaracteres(['hi', 'hello', 'ni hao', 'guten tag'], 2)
+  const result2 = mismaCantidadCaracteres(['javascript', 'pedro', 'amigo', 'parque'], 5)
 }
+  console.log("Palabras con length == 2",result1);
+  console.log("Palabras con length == 5",result2);
+
 
 // No modifiques nada debajo de esta linea //
 

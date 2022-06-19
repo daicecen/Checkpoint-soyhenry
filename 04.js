@@ -19,8 +19,14 @@ function sumArray(array, n) {
   // por lo tanto también debería devolver false en este caso
 
   // Tu código aca:
+  const array = [2, 5, 7, 10, 11, 15, 20];
+  let suma = 0;
 
-};
+  for (let i = 0; i < array.length; i++) {
+  suma += array[i];
+}
+}
+console.log(suma)
 
 // No modifiques nada debajo de esta linea //
 

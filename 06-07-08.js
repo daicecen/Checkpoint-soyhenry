@@ -12,8 +12,12 @@ function crearClaseViajero() {
 
       // Tu código aca:
 
+          this.nombre = nombre;
+          this.edad = edad;
+          this.paises = paises;
+          this.compañeros = compañeros;
     }
-
+  
     addCompañero(nombre, nacionalidad, edad) {
       // El método 'addCompañero' recibe un string 'nombre', un string 'nacionalidad' y un entero 'edad' y
       // debe agregar un objeto:
@@ -21,7 +25,8 @@ function crearClaseViajero() {
       // No debe retornar nada.
 
       // Tu código aca:
-
+      var compañero = {nombre, nacionalidad, edad}
+      this.compañeros.push({compañero});
     }
 
     addPais(pais) {
@@ -29,6 +34,8 @@ function crearClaseViajero() {
       // No debe retornar nada.
 
       // Tu código aca:
+
+      this.paises.push(pais);
 
     }
 
@@ -40,6 +47,15 @@ function crearClaseViajero() {
       // viajero.getCompañeros() debería devolver ['John', 'Peter']
 
       // Tu código aca:
+
+      const compañeros = [
+        {nombre: 'Jhon', nacionalidad: 'Australiano', edad: 27},
+        {nombre: 'Peter', nacionalidad: 'belga', edad: 33}
+      ];
+      
+      const indexed = compañeros.map((compañero) => compañero.nombre);
+      
+      console.log(indexed);
       
     }
 
@@ -49,7 +65,12 @@ function crearClaseViajero() {
       // viajero.getPaises() debe devolver ['Belgica', 'Estados Unidos', 'Islandia']
 
       // Tu código aca:
-      
+
+      const paises = ['Belgica', 'Estados Unidos', 'Islandia'];
+      function mostrarNombres(elemento) {
+        console.log(elemento);
+      }
+      paises.forEach(mostrarNombres);
     }
 
     getPromedioEdad() {
@@ -71,11 +92,22 @@ function crearClaseViajero() {
 
       // Tu código aca:
 
-    }
-  };
+      viajero = new Object()
+      viajero.companeros = [{ nombre: 'John', nacionalidad: "Australiano", edad: 27, },{ nombre: 'Peter', nacionalidad: "Belga", edad: 23 }]
 
-  return Viajero;
+      viajero.getPromedioEdad = function () { 
+      var edades = 0
+     this.companeros.map(function(obj){
+     edades += obj.edad; 
+     })
+     edades = edades / this.companeros.length;
+     return edades;
+     }
+    console.log(viajero.getPromedioEdad())
+    }
+  }
 }
+
 
 // No modifiques nada debajo de esta linea //
 
